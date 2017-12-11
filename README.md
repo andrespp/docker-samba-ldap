@@ -41,9 +41,9 @@ And `./smb.conf`:
 
 ```
 [global]
-workgroup = CAP
-server string = Servidor de Arquivos
-netbios name = pearl
+workgroup = MyWorkgroup
+server string = My fileserver
+netbios name = myhostname
 dns proxy = no
 wide links = no
 log level = 4
@@ -52,13 +52,13 @@ client lanman auth = Yes
 security = user
 encrypt passwords = true
 # password database backend ======================================
-	passdb backend = ldapsam:ldap://192.168.1.248
+	passdb backend = ldapsam:ldap://192.168.1.1
 	ldap passwd sync     = yes
-	ldap admin dn        =   cn=admin,dc=capengenharia
-	ldap suffix          =   dc=capengenharia
-	ldap user suffix     =   ou=pessoas
+	ldap admin dn        =   cn=admin,dc=base
+	ldap suffix          =   dc=base
+	ldap user suffix     =   ou=users
 	ldap machine suffix  =   ou=computers
-	ldap group suffix    =   ou=grupos
+	ldap group suffix    =   ou=groups
 	ldap idmap suffix    =   ou=idmap
 	ldap delete dn       =   yes
 	ldap ssl             =   off
@@ -77,7 +77,7 @@ usershare allow guests = yes
 #======================= Share Definitions =======================
 
 [Documentos]
-   comment = Documentos CAP
+   comment = Shared Documents
    path = /mnt/Documentos
    browseable = yes
    guest ok = no
