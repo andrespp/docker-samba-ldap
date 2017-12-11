@@ -5,7 +5,7 @@ andrespp/samba-ldap
 
 Docker image for SAMBA with ldap authentication.
 
-This image is based on `andrespp/debian-ldap`.
+This image is based on `andrespp/debian-ldap` (Debian 8.9 - Jessie).
 
 # Quick start
 
