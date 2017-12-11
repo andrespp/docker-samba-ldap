@@ -107,7 +107,7 @@ $ docker container run --rm -d -p 445:445 --name samba \
 
 # Environment Variables
 
-This image uses several environment variables in order to controls its behavior,
+This image uses several environment variables in order to control its behavior,
 and some of them may be required
 
 `SAMBA_LDAP_PASSWORD` *Required
