@@ -5,7 +5,7 @@ andrespp/samba-ldap
 
 Docker image for SAMBA with ldap authentication.
 
-This image is based on `FROM andrespp/debian-ldap`.
+This image is based on `andrespp/debian-ldap`.
 
 # Quick start
 
@@ -27,7 +27,7 @@ services:
      - ./sandbox/Documentos:/mnt/Documentos
 ```
 
-Where `./libnss-ldap.conf`:
+Where `./sandbox/libnss-ldap.conf`:
 
 ```
 base dc=base
@@ -37,7 +37,7 @@ binddn uid=linux,ou=system,dc=base
 bindpw secret-password
 ```
 
-And `./smb.conf`:
+And `./sandbox/smb.conf`:
 
 ```
 [global]
